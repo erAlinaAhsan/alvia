@@ -4,7 +4,7 @@
 
 <body>
     <article>
-        <h1><a href="/post">My First Post</a></h1>
+        <h1><a href="/posts/my-first-post">My First Post</a></h1>
     <p>
     Artificial intelligence (AI) is a wide-ranging branch of computer science concerned with building smart machines capable of performing tasks that typically require human intelligence. While AI is an interdisciplinary science with multiple approaches, advancements in machine learning and deep learning, in particular, are creating a paradigm shift in virtually every sector of the tech industry. 
 
@@ -12,7 +12,7 @@ Artificial intelligence allows machines to model, or even improve upon, the capa
     </p>
     </article>
     <article>
-        <h1><a href="/post">My Second Post</a></h1>
+        <h1><a href="/posts/my-second-post">My Second Post</a></h1>
         <p>
         Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.
 
@@ -20,7 +20,7 @@ IBM has a rich history with machine learning. One of its own, Arthur Samuel, is 
         </p>
     </article>
     <article>
-        <h1><a href="/post">My Third Post</a></h1>
+        <h1><a href="/posts/my-third-post">My Third Post</a></h1>
         <p>
         Data science combines math and statistics, specialized programming, advanced analytics, artificial intelligence (AI), and machine learning with specific subject matter expertise to uncover actionable insights hidden in an organization’s data. These insights can be used to guide decision making and strategic planning.
 
