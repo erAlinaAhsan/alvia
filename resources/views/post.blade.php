@@ -4,8 +4,11 @@
 
 <body>
     <article>
-       
-    <?=$post;?>
+      
+      <div>{!! $post->body !!} 
+      </div>
+
+    
     </article>
     <a href="/">Go Back</a>
 </body>
