@@ -2,7 +2,7 @@
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use League\CommonMark\Extension\FrontMatter\Data\SymfonyYamlFrontMatterParser;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,18 +14,20 @@ use League\CommonMark\Extension\FrontMatter\Data\SymfonyYamlFrontMatterParser;
 |
 */
 
-  Route::get('/', function () 
-  {
+//   Route::get('/', function () 
+//   {
    
-    return view('posts',['posts'=>Post::all()]);
-   });
+//     return view('posts',['posts'=>Post::all()]);
+//    });
 
 
-   Route::get('posts/{slug}',function ($slug){ 
+//    Route::get('posts/{slug}',function ($slug){ 
 
 
     
-     return view('post',['post'=>Post::find($slug)]);
+//      return view('post',['post'=>Post::find($slug)]);
       
 
-})-> where('post','[A-z_\-]+');
+// })-> where('post','[A-z_\-]+');
+Route::get('/',[PageController::class,"showUser"])->name('home');
+Route::get('/test',[PageController::class,"showTest"])->name('test');
