@@ -5,7 +5,7 @@
 <body>
     <article>
       
-      <div>{!! $post->body !!} 
+      <div>{!! $post !!} 
       </div>
 
     
