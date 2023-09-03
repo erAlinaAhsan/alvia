@@ -6,11 +6,13 @@
      @foreach($posts as $post)
     <article>
   <h1>
-    <a href="/posts/{slug}">
-       
+    <a href="/posts/{{$post->id}}">
+       {{$post->title}}
     </a>
 </h1>
-{!!$post!!} 
+<div>
+  {{$post->excerpt}}
+</div>
 
 
     </article>

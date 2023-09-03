@@ -1,8 +1,12 @@
 <?php
+
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
 use League\CommonMark\Extension\FrontMatter\Data\SymfonyYamlFrontMatterParser;
 use App\Http\Controllers\PageController;
+use Spatie\YamlFrontMatter\YamlFrontMatter;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,20 +18,18 @@ use App\Http\Controllers\PageController;
 |
 */
 
-//   Route::get('/', function () 
-//   {
+Route::get('/', function () {
    
-//     return view('posts',['posts'=>Post::all()]);
-//    });
+        return view('posts',[
+        'posts'=>Post::all()
+    ]);
 
+    });
+       
 
-//    Route::get('posts/{slug}',function ($slug){ 
-
-
+    Route::get('posts/{post}', function ($id) {
+     return view('post', [
+        'post' => Post::findOrFail($id)
+    ]);
+    });
     
-//      return view('post',['post'=>Post::find($slug)]);
-      
-
-// })-> where('post','[A-z_\-]+');
-Route::get('/',[PageController::class,"showUser"])->name('home');
-Route::get('/test',[PageController::class,"showTest"])->name('test');
