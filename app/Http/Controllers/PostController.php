@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Validation\Rule;
-
+use Illuminate\Support\Facades\Gate;
 use App\Models\Post;
 
 
@@ -11,6 +11,8 @@ class PostController extends Controller
 {
     public function index()
     {
+
+
         return view('posts.index', [
             'posts' => Post::latest()->filter(
                 request(['search', 'category', 'author'])
