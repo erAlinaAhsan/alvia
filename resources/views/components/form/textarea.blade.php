@@ -6,5 +6,5 @@
 </textarea>
 
     <x-form.error name="{{ $name }}" />
-    </div>
+
 </x-form.field>
