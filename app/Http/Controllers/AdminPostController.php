@@ -39,13 +39,17 @@ class AdminPostController extends Controller
     public function update(Post $post)
     {
         $attributes = $this->validatePost($post);
+
+
         if ($attributes['thumbnail'] ?? false) {
             $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
         }
 
         $post->update($attributes);
+
         return back()->with('success', 'Post Updated!');
     }
+
     public function destroy(Post $post)
     {
         $post->delete();
